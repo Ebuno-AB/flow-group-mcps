@@ -42,7 +42,7 @@ Then tell the user what only they can do:
 - Register the App Group for both bundle IDs in the Apple Developer account.
 - Test in Xcode: the App Clip scheme, Run → Arguments → Environment Variables, `_XCAppClipURL` = `https://appclip.apple.com/id?p=<clip bundle id>&fg_click=<click id>&fg_ref=<code>`. Run the clip, then install and open the full app: `useAffiliate()` gives `source: 'app_clip'`. Then call `send_test_event` with that code and click.
 - In App Store Connect: upload a build with the clip and create the **default App Clip experience** (header image, subtitle, action). No advanced experience or website is needed.
-- Only once the clip is live in the App Store: in the Flow dashboard, step 3 "Your app in the stores" ("Appen i butikerna"), under "Advanced" ("Avancerat"), enter the App Clip bundle ID and choose "App Clip" as the route for iPhones ("Väg för iPhone"). You can't change this setting; the user does. Afterwards, `get_setup` shows `appClipInUse: true`.
+- Only once the clip is live in the App Store: in the Flow dashboard, step 3 "Your app in the stores" ("Appen i butikerna"), under "Advanced" ("Avancerat"), enter the App Clip bundle ID and choose "App Clip" as the route for iPhones ("Väg för iPhone"). If `get_setup` → `access.tools` lists `update_app` and the user confirms the clip is live, you can do it with `update_app` (`iosAppClipBundleId` and `iosRoute: "app_clip"`); otherwise the user does. Afterwards, `get_setup` shows `appClipInUse: true`.
 
 ## 4. Check the App Clip it has
 

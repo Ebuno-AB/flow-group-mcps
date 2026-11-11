@@ -1,6 +1,6 @@
 {
   "name": "flow-affiliate",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Integrates Flow Affiliate into an Expo or React Native app, its backend or a website, tests it against Flow's test environment and offers an App Clip for iPhone.",
   "author": {
     "name": "Flow Group"

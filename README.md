@@ -18,12 +18,15 @@ Skills:
 
 - `integrate-flow-affiliate`: finds the app, backend or website in your project, installs and wires the
   SDK, adds the sign-up confirmation to your backend, sends a test sign-up, checks what arrived and ends
-  with what is left in the Flow dashboard.
+  with what is left in the Flow dashboard. If the key may change the setup, it also fills in the store
+  links and app ids it finds in your project, asking before each change.
 - `add-app-clip`: offers an iOS App Clip for Flow invites and walks through adding one to an Expo app,
   or checks the one you have.
 
 1. In Flow Affiliate, open your program, step 1 "Install the SDK", choose "Let your AI assistant do it"
-   and create an AI key. It works only for that program, only in the test environment.
+   and create an AI key. It works only for that program, only in the test environment. Choose what it
+   may change: "Can change the setup" (on by default) and "Can change payouts and terms" (off by
+   default). Its changes are made as you, never beyond what your role allows.
 2. Then:
 
 ```bash
