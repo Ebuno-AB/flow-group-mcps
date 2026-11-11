@@ -11,7 +11,7 @@
       "displayName": "Flow Affiliate",
       "source": "./plugins/flow-affiliate",
       "description": "Integrates Flow Affiliate into an Expo or React Native app, its backend or a website, tests it against Flow's test environment and offers an App Clip for iPhone.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "category": "developer-tools",
       "author": {
         "name": "Flow Group"
