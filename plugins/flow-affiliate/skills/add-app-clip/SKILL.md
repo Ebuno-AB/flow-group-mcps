@@ -33,14 +33,14 @@ Follow `app_clip_guide` step by step, with the program's real values:
 3. Metro: with `BUILDING_FOR_APP_CLIP`, prefer `*.clip.*` files, and add `src/entry.clip.tsx` (if the app's entry isn't already a file that `index.js` imports, make it one).
 4. `groupStorage` over the App Group.
 5. The clip's screen: `useLinkingURL()` for the invocation URL, `saveHandoff({ code: fg_ref, clickId: fg_click, url }, groupStorage)`, `GET /v1/share/landing/:code` with a 2-second timeout for the greeting and the bonus, and "Install the app" with `displayOverlay()`. Keep it to one or two screens, in the app's own look and language.
-6. The full app: `handoff: Platform.OS === 'ios' ? groupStorage : undefined` in `createReferralCatcher`.
+6. The full app: `handoff: Platform.OS === 'ios' ? groupStorage : undefined` in `createAffiliateCatcher`.
 
 Keep the clip small: 100 MB uncompressed on iOS 17 and later for link invocations, less on older targets. Run `npx expo prebuild --platform ios` (or the project's own build) and the type checks. Don't commit generated `ios/` files if the project doesn't keep them.
 
 Then tell the user what only they can do:
 
 - Register the App Group for both bundle IDs in the Apple Developer account.
-- Test in Xcode: the App Clip scheme, Run → Arguments → Environment Variables, `_XCAppClipURL` = `https://appclip.apple.com/id?p=<clip bundle id>&fg_click=<click id>&fg_ref=<code>`. Run the clip, then install and open the full app: `useReferral()` gives `source: 'app_clip'`. Then call `send_test_event` with that code and click.
+- Test in Xcode: the App Clip scheme, Run → Arguments → Environment Variables, `_XCAppClipURL` = `https://appclip.apple.com/id?p=<clip bundle id>&fg_click=<click id>&fg_ref=<code>`. Run the clip, then install and open the full app: `useAffiliate()` gives `source: 'app_clip'`. Then call `send_test_event` with that code and click.
 - In App Store Connect: upload a build with the clip and create the **default App Clip experience** (header image, subtitle, action). No advanced experience or website is needed.
 - Only once the clip is live in the App Store: in the Flow dashboard, step 3 "Your app in the stores" ("Appen i butikerna"), under "Advanced" ("Avancerat"), enter the App Clip bundle ID and choose "App Clip" as the route for iPhones ("Väg för iPhone"). You can't change this setting; the user does. Afterwards, `get_setup` shows `appClipInUse: true`.
 
