@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "flow-group",
+  "description": "Flow Group MCPs: plugins for coding assistants that connect to Flow Group's services, each with its MCP server and skills.",
+  "owner": {
+    "name": "Flow Group"
+  },
+  "plugins": [
+    {
+      "name": "flow-affiliate",
+      "displayName": "Flow Affiliate",
+      "source": "./plugins/flow-affiliate",
+      "description": "Integrates Flow Affiliate into an Expo or React Native app, its backend or a website, tests it against Flow's test environment and offers an App Clip for iPhone.",
+      "version": "0.1.0",
+      "category": "developer-tools",
+      "author": {
+        "name": "Flow Group"
+      },
+      "homepage": "https://affiliate.yflow.io/docs/guides/ai-assisted-setup",
+      "keywords": ["flow-affiliate", "affiliate", "referral", "attribution", "expo", "react-native", "app-clip", "mcp"]
+    }
+  ]
+}

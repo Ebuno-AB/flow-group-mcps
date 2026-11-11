@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "flow-affiliate": {
+      "type": "http",
+      "url": "${FLOW_MCP_URL:-https://api.affiliate.yflow.io/v1/mcp}",
+      "headers": {
+        "Authorization": "Bearer ${FLOW_AI_KEY}"
+      }
+    }
+  }
+}
