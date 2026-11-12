@@ -41,7 +41,7 @@ A monorepo can have several parts; do each. If the app and its backend are in di
 ## 3. The app
 
 1. Call `get_integration_guide` with the app's target and follow it exactly: the install command, `AffiliateProvider` with `installMatch` around the root, and the sign-up sending `affiliate.code` (as `affiliateCode`) and `affiliate.clickId` (as `clickId`) to the app's own backend.
-2. `@flow/expo` and `@flow/sdk-core` are not on the public npm registry yet. Ask the user for the package files (tarballs) from their Flow Group contact, put them in the project (for example `vendor/flow-sdk/`) and install them from there. Never install a package of that name from npm.
+2. `@flow/expo`, `@flow/react-native` and `@flow/sdk-core` are not on the public npm registry yet (an Expo app needs all three, a bare React Native app the last two). Ask the user for the package files (tarballs) from their Flow Group contact, put them in the project (for example `vendor/flow-sdk/`) and install them from there. Never install a package of that name from npm.
 3. Fit the code to the app: Expo Router (`app/_layout.tsx`) or a root `App.tsx`; the app's own sign-up call and form. Keep the code field at sign-up if there is one.
 4. iPhone: call `app_clip_guide`. If the program sends iPhones to an App Clip, the full app must pass `handoff` to `createAffiliateCatcher`: do it now. If it has none, mention in one line that an App Clip can greet invited people and hand the click over without a code, and offer the `add-app-clip` skill. Don't add one unasked.
 
